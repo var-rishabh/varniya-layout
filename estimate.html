@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&display=swap"
+        rel="stylesheet">
+
+    <title>Varniya Estimate</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            color: #453638;
+        }
+
+        body {
+            background-color: #fef7ed;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .signature {
+            width: 215px;
+            height: 64px;
+            left: 77px;
+            top: 720px;
+            position: absolute;
+        }
+
+        .stamp {
+            width: 120px;
+            height: 115px;
+            left: 400px;
+            top: 690px;
+            position: absolute;
+        }
+
+        .heading__sub {
+            width: 499px;
+            left: 54px;
+            top: 116px;
+            position: absolute;
+            font-size: 14px;
+            font-family: Cinzel;
+            font-weight: 700;
+            word-wrap: break-word;
+            font-family: 'Cinzel', serif !important;
+        }
+
+        .logo {
+            width: 215px;
+            height: 50.13px;
+            left: 52px;
+            top: 48.13px;
+            position: absolute;
+        }
+
+        .text1 {
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .text2 {
+            width: 250px;
+            left: 52px;
+            top: 590px;
+            position: absolute;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .diamond__image {
+            width: 149px;
+            height: 150px;
+            left: 55px;
+            top: 290px;
+            position: absolute;
+        }
+
+        .date1 {
+            width: 100px;
+            left: 450px;
+            top: 65px;
+            position: absolute;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .bank__details {
+            left: 318px;
+            top: 585px;
+            position: absolute;
+            color: black;
+            font-size: 12px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .other__details {
+            width: 235px;
+            left: 318px;
+            top: 600px;
+            position: absolute;
+            color: black;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .main__heading {
+            width: 340px;
+            height: 30px;
+            left: 215px;
+            position: absolute;
+        }
+
+        .main__heading--bg {
+            width: 340px;
+            height: 30px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background: #453638;
+        }
+
+        .main__heading1--title {
+            width: 250px;
+            height: 30px;
+            left: 10px;
+            top: 8px;
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .main__heading1--amount {
+            width: 50px;
+            height: 30px;
+            left: 275px;
+            top: 8px;
+            position: absolute;
+            text-align: right;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .vertical__bar {
+            width: 67px;
+            height: 0px;
+            left: 307px;
+            top: 670px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            border: 0.70px #453638 solid;
+        }
+
+        .invoice__number {
+            width: 127px;
+            height: 17px;
+            left: 417px;
+            top: 118px;
+            position: absolute;
+            text-align: right;
+            color: #453638;
+            font-size: 14px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .main__data {
+            width: 340px;
+            left: 215px;
+            top: 285px;
+            position: absolute;
+        }
+
+        .options {
+            padding: 0 8px;
+            width: 100%;
+            position: relative;
+        }
+
+        .metal__details {
+            padding-top: 2px;
+            width: 100%;
+            position: relative;
+            color: #453638;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .metal__price {
+            position: relative;
+            text-align: right;
+            color: #453638;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .horizontal__bar {
+            width: 320px;
+            margin-top: 10px;
+            position: relative;
+            border: 1px black solid;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo" src="https://dev-apps-bucket.sgp1.digitaloceanspaces.com/admin-panel/varniya-logo.png" />
+        <div class="heading__sub">
+            A Clearly Good Price Estimation
+        </div>
+        <div class="date1"> {{todays_date}} </div>
+        <div class="invoice__number"> {{ invoice_number }} </div>
+        <div style="width: 488px; left: 54px; top: 170px; position: absolute">
+            <span class="text1">
+                Hello <span style="font-weight: 700;"> {{ customer_name }} </span>,
+            </span> <br><br>
+            <span class="text1">
+                Attached is an estimate for a <span style="font-weight: 700;"> {{ jewellery_name_type }}</span>, with
+                their respective colour and clarity grades.
+            </span>
+        </div>
+        <img class="diamond__image" src="https://via.placeholder.com/149x150" />
+        <div class="main__heading" style="top: 253px;">
+            <div class="main__heading--bg"></div>
+            <div class="main__heading1--title">
+                Option 1 - {{ clarity_type_1_name }}</div>
+            <div class="main__heading1--amount">
+                Amount
+            </div>
+        </div>
+        <div class="main__data">
+            <div class="options">
+                <div class="metal__details">
+                    {{ metal_name }} <br />
+                    - {{ metal_details}}
+                    <div class="metal__price">
+                        {{ metal_price }}
+                    </div>
+                </div>
+                <div class="metal__details">
+                    Center Diamond<br />
+                    - {{ center_diamond_details }}
+                    <div class="metal__price">
+                        {{ center_diamond_price }}
+                    </div>
+                </div>
+                <div class="metal__details">
+                    Making Charges
+                    <div class="metal__price">
+                        {{ making_charges }}
+                    </div>
+                </div>
+                <div class="metal__details">
+                    Certification & Hallmarking <br>
+                    <div class="metal__price">
+                        ₴ 3150.0
+                    </div>
+                </div>
+                <div class="metal__details">
+                    GST @ 3%
+                    <div class="metal__price">
+                        {{ gst_charges }}
+                    </div>
+                </div>
+                <div class="horizontal__bar"></div>
+                <div class="metal__details" style="font-size: 14px; font-weight: 700;">
+                    Estimated Total Amount
+                    <div class="metal__price" style="font-size: 14px; font-weight: 700;">
+                        {{ estimated_amount_for_clarity_type_1 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text2">
+            We request a 50% advance to process your order and give you an estimated delivery date.<br><br>
+            You can expect your design to be custom made and delivered within 2 weeks of making an advance payment.
+            Please allow some flexibility.
+        </div>
+        <div class="vertical__bar"></div>
+        <div class="bank__details">
+            Bank Details: E.& O.E.
+        </div>
+        <div class="other__details">
+            <span style="color: black; font-size: 12px; font-weight: 400; word-wrap: break-word">
+                UPI:
+            </span>
+            <span style="color: black; font-size: 12px; font-weight: 700; word-wrap: break-word">
+                varniyadiamonds@ybl
+            </span> <br> <br>
+            <span style="color: black; font-size: 12px; font-weight: 400; word-wrap: break-word">
+                Name: WELLMO SERVICES (OPC) Pvt Ltd <br />Branch: IndusInd Bank, Anna Nagar, Al Complex<br />Account
+                #
+                201003002675 <br />IFSC : INDB0000046
+            </span>
+        </div>
+        <img class="signature"
+            src="https://dev-apps-bucket.sgp1.digitaloceanspaces.com/admin-panel/varuns-signature.png" />
+        <img class="stamp" src="https://dev-apps-bucket.sgp1.digitaloceanspaces.com/admin-panel/varniya-stamp.png" />
+    </div>
+</body>
+
+</html>
