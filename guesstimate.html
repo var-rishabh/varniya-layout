@@ -9,11 +9,257 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./main.css">
-
     <title>Varniya Guesstimate</title>
 
-    <style></style>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            color: #453638;
+        }
+
+        body {
+            background-color: #fef7ed;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .signature {
+            width: 215px;
+            height: 64px;
+            left: 77px;
+            top: 720px;
+            position: absolute;
+        }
+
+        .stamp {
+            width: 120px;
+            height: 115px;
+            left: 400px;
+            top: 690px;
+            position: absolute;
+        }
+
+        .heading__sub {
+            width: 499px;
+            left: 54px;
+            top: 116px;
+            position: absolute;
+            font-size: 14px;
+            font-family: Cinzel;
+            font-weight: 700;
+            word-wrap: break-word;
+            font-family: 'Cinzel', serif !important;
+        }
+
+        .logo {
+            width: 215px;
+            height: 50.13px;
+            left: 52px;
+            top: 48.13px;
+            position: absolute;
+        }
+
+        .text1 {
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .text2 {
+            width: 250px;
+            left: 52px;
+            top: 590px;
+            position: absolute;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .diamond__image {
+            width: 149px;
+            height: 150px;
+            left: 55px;
+            top: 290px;
+            position: absolute;
+        }
+
+        .date1 {
+            width: 100px;
+            left: 450px;
+            top: 65px;
+            position: absolute;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .bank__details {
+            left: 318px;
+            top: 585px;
+            position: absolute;
+            color: black;
+            font-size: 12px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .other__details {
+            width: 235px;
+            left: 318px;
+            top: 600px;
+            position: absolute;
+            color: black;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .main__heading {
+            width: 340px;
+            height: 30px;
+            left: 215px;
+            position: absolute;
+        }
+
+        .main__heading--bg {
+            width: 340px;
+            height: 30px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background: #453638;
+        }
+
+        .main__heading1--title {
+            width: 250px;
+            height: 30px;
+            left: 10px;
+            top: 8px;
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .main__heading1--amount {
+            width: 50px;
+            height: 30px;
+            left: 275px;
+            top: 8px;
+            position: absolute;
+            text-align: right;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .vertical__bar {
+            width: 67px;
+            height: 0px;
+            left: 307px;
+            top: 670px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            border: 0.70px #453638 solid;
+        }
+
+        .invoice__number {
+            width: 127px;
+            height: 17px;
+            left: 417px;
+            top: 118px;
+            position: absolute;
+            text-align: right;
+            color: #453638;
+            font-size: 14px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .main__data {
+            width: 340px;
+            left: 215px;
+            top: 285px;
+            position: absolute;
+        }
+
+        .options {
+            padding: 0 8px;
+            width: 100%;
+            position: relative;
+        }
+
+        .metal__details {
+            padding-top: 2px;
+            width: 100%;
+            position: relative;
+            color: #453638;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .metal__price {
+            position: relative;
+            text-align: right;
+            color: #453638;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .horizontal__bar {
+            width: 320px;
+            margin-top: 10px;
+            position: relative;
+            border: 1px black solid;
+        }
+
+        .other__heading {
+            background-color: #453638;
+            width: 340px;
+            height: 30px;
+            position: relative;
+            margin: 5px 0;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .other__heading--title {
+            position: relative;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .other__heading--amount {
+            color: white;
+            text-align: right;
+            z-index: 999;
+            position: relative;
+            text-align: right;
+            font-size: 13px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+    </style>
 
 </head>
 
